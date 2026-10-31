@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digital Farm and Garden</title>
+<meta name="description" content="Digital Farm and Garden is a small Texas studio growing iPhone apps and games, one plot at a time.">
+<meta name="theme-color" content="#1C1A3A">
+<meta property="og:title" content="Digital Farm and Garden">
+<meta property="og:description" content="A small Texas studio growing iPhone apps and games, one plot at a time.">
+<meta property="og:image" content="https://digitalfarmandgarden.com/assets/og-card.jpg">
+<meta property="og:url" content="https://digitalfarmandgarden.com/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/Fraunces-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<!-- Digital Farm and Garden, v1 (Creative, Oct 30 2026). Zero JavaScript, no cookies, no trackers, no third-party requests.
+     Fonts: Fraunces (SIL Open Font License, license in the font files' metadata). Art: The Farm map, company edition. -->
+<style>
+  @font-face { font-family: "Fraunces"; src: url(/assets/Fraunces-Bold.woff2) format("woff2"); font-weight: 700; font-display: swap; }
+  @font-face { font-family: "Fraunces"; src: url(/assets/Fraunces-MediumItalic.woff2) format("woff2"); font-weight: 500; font-style: italic; font-display: swap; }
+  :root { --night:#1C1A3A; --mid:#121027; --ink:#F4EBD6; --muted:#BDB6CF; --lemon:#F2D06B; --sage:#9DB58A; --lav:#A99BD6; --card:#24214A; --edge:rgba(242,208,107,.28); }
+  * { box-sizing:border-box; }
+  html { color-scheme:dark; }
+  body { margin:0; background:var(--night); color:var(--ink); font:18px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  a { color:var(--lemon); }
+  a:focus-visible { outline:2px solid var(--lemon); outline-offset:4px; border-radius:6px; }
+  .wrap { max-width:1180px; margin:0 auto; padding:0 24px; }
+  .serif, h1, h2, h3 { font-family:"Fraunces", Georgia, "Times New Roman", serif; font-weight:700; letter-spacing:-.01em; }
+  em.and { font-family:"Fraunces", Georgia, serif; font-style:italic; font-weight:500; color:var(--lemon); }
+
+  header { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:22px 0; flex-wrap:wrap; }
+  .brand { display:flex; align-items:center; gap:12px; color:var(--ink); text-decoration:none; font:700 1.35rem/1 "Fraunces", Georgia, serif; }
+  .brand svg { width:40px; height:42px; flex:none; }
+  nav a { margin-left:26px; color:var(--ink); text-decoration:none; font-weight:600; font-size:.98rem; }
+  nav a:hover { color:var(--lemon); }
+
+  .hero { padding:28px 0 26px; text-align:center; }
+  .kicker { margin:0 0 10px; color:var(--sage); font-weight:700; letter-spacing:.14em; text-transform:uppercase; font-size:.8rem; }
+  h1 { margin:0; font-size:clamp(2.6rem, 7.4vw, 5.6rem); line-height:1.02; }
+  .lede { margin:18px auto 0; max-width:36ch; color:var(--muted); font-size:1.15rem; }
+
+  /* The map: every building is a link. Hover or focus shows its name. */
+  .map { position:relative; margin:0 auto; max-width:1300px; padding:0 16px; }
+  .map img { display:block; width:100%; height:auto; border-radius:18px; box-shadow:0 30px 80px rgba(0,0,0,.45); }
+  .spot { position:absolute; border-radius:14px; outline:2px solid transparent; transition:outline-color .2s, background .2s; }
+  .spot span { position:absolute; left:50%; bottom:calc(100% + 6px); transform:translateX(-50%); white-space:nowrap; background:var(--mid); color:var(--lemon); border:1px solid var(--edge);
+    padding:4px 12px; border-radius:999px; font:700 .85rem "Fraunces", Georgia, serif; opacity:0; transition:opacity .2s; pointer-events:none; }
+  .spot:hover, .spot:focus-visible { outline-color:var(--lemon); background:rgba(242,208,107,.08); }
+  .spot:hover span, .spot:focus-visible span { opacity:1; }
+  .porch { margin:34px auto 0; max-width:1300px; padding:0 16px; }
+  .porch img { display:block; width:100%; height:auto; border-radius:18px; box-shadow:0 30px 80px rgba(0,0,0,.45); }
+  .porch figcaption { text-align:center; color:var(--muted); font-size:.92rem; margin:14px 0 0; }
+
+  section { padding:70px 0 10px; }
+  h2 { font-size:clamp(2rem, 4.4vw, 3rem); margin:0 0 8px; }
+  .sub { color:var(--muted); margin:0 0 30px; max-width:52ch; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:18px; }
+  .place { background:var(--card); border:1px solid var(--edge); border-radius:18px; padding:22px 22px 20px; scroll-margin-top:20px; }
+  .place:target { outline:2px solid var(--lemon); }
+  .place h3 { margin:0 0 6px; font-size:1.35rem; }
+  .place p { margin:0; color:var(--muted); font-size:1rem; }
+  .tag { display:inline-block; margin:0 0 12px; padding:2px 10px; border-radius:999px; font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; background:rgba(157,181,138,.16); color:var(--sage); }
+  .tag.lemon { background:rgba(242,208,107,.14); color:var(--lemon); }
+
+  .promise { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:18px; list-style:none; padding:0; margin:0; }
+  .promise li { border-top:2px solid var(--sage); padding-top:14px; }
+  .promise b { display:block; font:700 1.15rem "Fraunces", Georgia, serif; margin-bottom:4px; }
+  .promise span { color:var(--muted); font-size:1rem; }
+
+  footer { margin-top:80px; padding:34px 0 50px; border-top:1px solid rgba(244,235,214,.12); color:var(--muted); font-size:.95rem; }
+  footer .row { display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; align-items:center; }
+  footer a { color:var(--ink); }
+
+  @media (max-width:700px) {
+    nav a { margin:0 18px 0 0; }
+    header { justify-content:flex-start; }
+    .spot span { display:none; }
+  }
+  @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="/" aria-label="Digital Farm and Garden, home">
+      <svg viewBox="30 36 140 166" aria-hidden="true"><path d="M40,182 V100 L64,64 L100,44 L136,64 L160,100 V182 Z" fill="none" stroke="#F4EBD6" stroke-width="10" stroke-linejoin="round"/><path d="M78,182 V138 H122 V182 M78,138 L122,182 M122,138 L78,182" fill="none" stroke="#F4EBD6" stroke-width="7"/><path d="M99.67,76.00 A20,20 0 1 0 119.30,101.24 A16,16 0 1 1 99.67,76.00 Z" fill="#F2D06B"/><path d="M34,196 Q100,186 166,196" stroke="#9DB58A" stroke-width="8" fill="none" stroke-linecap="round"/></svg>
+      <span>Digital Farm <em class="and">and</em> Garden</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#farm">The farm</a>
+      <a href="#promise">Our promise</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <p class="kicker">A small studio in Texas</p>
+    <h1>Bring the color back.</h1>
+    <p class="lede">We grow iPhone apps and games, one plot at a time.</p>
+  </div>
+</div>
+
+<figure class="porch">
+  <picture>
+    <source type="image/webp" srcset="/assets/porch-800.webp 800w, /assets/porch-1300.webp 1300w" sizes="(max-width:1300px) 100vw, 1300px">
+    <img src="/assets/porch.jpg" width="1300" height="867" alt="Hand-inked night scene: two friends in rocking chairs code on laptops on a farmhouse porch, one sipping coffee and smiling up at a crescent moon, the other in a beanie and glasses, with lemon trees, sunflowers, tomatoes, a chalkboard that reads Digital Farm and Garden, and an aurora where a sleepy orange cat curls up.">
+  </picture>
+  <figcaption>Up in the aurora is Alex, our studio cat. He keeps watch over every build.</figcaption>
+</figure>
+
+<div class="wrap">
+  <section id="farm" aria-labelledby="farm-h" style="padding-bottom:0">
+    <h2 id="farm-h">Walk the farm</h2>
+    <p class="sub">Every building is part of the studio. When we start something new, a new building goes up. Every building is listed below.</p>
+  </section>
+</div>
+<div class="map">
+  <picture>
+    <source type="image/webp" srcset="/assets/farm-map-800.webp 800w, /assets/farm-map-1300.webp 1300w" sizes="(max-width:1300px) 100vw, 1300px">
+    <img src="/assets/farm-map.jpg" width="1300" height="732" loading="lazy" alt="A hand-inked night farm in the foothills: a glowing greenhouse, a farmhouse porch, a red barn workshop, a card house, a schoolhouse, a little post office and open fields, under a crescent moon and an aurora woven with code.">
+  </picture>
+  <a class="spot" href="#greenhouse" style="left:7.8%;top:23.7%;width:14.4%;height:15.8%"><span>The Greenhouse</span></a>
+  <a class="spot" href="#porch" style="left:36.7%;top:27.6%;width:18.9%;height:25.6%"><span>The Porch</span></a>
+  <a class="spot" href="#workshop" style="left:67.8%;top:19.7%;width:21.1%;height:27.6%"><span>The Workshop</span></a>
+  <a class="spot" href="#cardhouse" style="left:6.7%;top:69%;width:17.2%;height:15.8%"><span>Card House</span></a>
+  <a class="spot" href="#schoolhouse" style="left:84.4%;top:46.4%;width:12.2%;height:22.7%"><span>Schoolhouse</span></a>
+  <a class="spot" href="#almanac" style="left:66.7%;top:65.1%;width:23.9%;height:14.8%"><span>Almanac Post Office</span></a>
+  <a class="spot" href="#openland" style="left:33.3%;top:78.9%;width:38.9%;height:19.7%"><span>Open Land</span></a>
+</div>
+
+<div class="wrap">
+  <section aria-label="The buildings" style="padding-top:34px">
+    <div class="grid">
+      <article class="place" id="porch"><span class="tag lemon">Where it starts</span><h3>The Porch</h3><p>Late nights, big ideas and a lot of talking things through. Every app starts here.</p></article>
+      <article class="place" id="greenhouse"><span class="tag lemon">The Lab</span><h3>The Greenhouse</h3><p>Experiments and small builds, grown in the open. Visit the Lab at <a href="https://kdfarmandgarden.com">kdfarmandgarden.com</a>.</p></article>
+      <article class="place" id="workshop"><span class="tag lemon">How we build</span><h3>The Workshop</h3><p>Native iPhone and iPad apps in Swift, built small and careful, with privacy designed in from the first line.</p></article>
+      <article class="place" id="cardhouse"><span class="tag">Growing</span><h3>Card House</h3><p>A friendly solitaire for grown-ups, with stories between hands.</p></article>
+      <article class="place" id="schoolhouse"><span class="tag">Growing</span><h3>Schoolhouse</h3><p>A gentle coloring storybook for kids, designed for Apple's Kids Category.</p></article>
+      <article class="place" id="almanac"><span class="tag">Coming soon</span><h3>Almanac Post Office</h3><p>Notes from the farm: what we're building, what we learned and what's next.</p></article>
+      <article class="place" id="openland"><span class="tag">Seedlings</span><h3>Open Land</h3><p>Fenced plots with seed markers for ideas we haven't planted yet. The farm grows from here.</p></article>
+    </div>
+  </section>
+
+  <section id="promise" aria-labelledby="promise-h">
+    <h2 id="promise-h">Our promise</h2>
+    <p class="sub">The rules we farm by.</p>
+    <ul class="promise">
+      <li><b>Original work</b><span>Nothing copied, nothing borrowed.</span></li>
+      <li><b>Kids come first</b><span>Our kids' apps are built for Apple's Kids Category from day one.</span></li>
+      <li><b>No tracking here</b><span>This site has no cookies, no trackers and no JavaScript.</span></li>
+      <li><b>Honest numbers</b><span>If we tell you something, we can show you where it came from.</span></li>
+    </ul>
+  </section>
+
+  <footer id="contact">
+    <div class="row">
+      <div><span class="serif" style="color:var(--ink);font-size:1.15rem">Say hello:</span> <a href="mailto:hello@kdfarmandgarden.com">hello@kdfarmandgarden.com</a></div>
+      <div><a href="https://kdfarmandgarden.com/support/">Support</a></div>
+    </div>
+    <p>© 2026 KD Farm and Garden LLC, Texas. Digital Farm and Garden is a studio of KD Farm and Garden LLC.</p>
+  </footer>
+</div>
+</body>
+</html>
