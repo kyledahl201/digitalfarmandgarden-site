@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bottomless Cup Solitaire · Digital Farm and Garden</title>
+<meta name="description" content="Bottomless Cup Solitaire: classic solitaire at a little diner in Firefly Bend. Large-print cards and no ads. Coming soon to the diner.">
+<link rel="canonical" href="https://digitalfarmandgarden.com/games/bottomless-cup-solitaire/">
+<meta name="theme-color" content="#1C1A3A">
+<meta property="og:title" content="Bottomless Cup Solitaire · Digital Farm and Garden">
+<meta property="og:description" content="Bottomless Cup Solitaire: classic solitaire at a little diner in Firefly Bend. Large-print cards and no ads. Coming soon to the diner.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Digital Farm and Garden">
+<meta property="og:image" content="https://digitalfarmandgarden.com/assets/og-porch-v3.jpg">
+<meta property="og:image:secure_url" content="https://digitalfarmandgarden.com/assets/og-porch-v3.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Two friends coding on laptops in rocking chairs on a farmhouse porch at night, under a lemon moon and an aurora.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://digitalfarmandgarden.com/assets/og-porch-v3.jpg">
+<meta property="og:url" content="https://digitalfarmandgarden.com/games/bottomless-cup-solitaire/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/Fraunces-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/world/2395a91452/poster.webp" as="image" type="image/webp">
+<link rel="stylesheet" href="/assets/app/main-CjxGcRZU.css">
+<script>document.documentElement.classList.add('js')</script>
+<script type="module" src="/assets/app/main-CmUcgT12.js"></script>
+<!-- Digital Farm and Garden v3 (Engineering). No cookies, no trackers, no third-party requests. Fonts: Fraunces; Libre Caslon Text and Source Sans 3 on /ironwood/ (all SIL OFL), self-hosted. Art: Creative. -->
+</head>
+<body data-route="bottomless-cup" class="farm">
+<a class="skip pill" href="#content">Skip to content</a>
+<header class="site">
+  <a class="brand" href="/" aria-label="Digital Farm and Garden, home">
+    <svg viewBox="30 36 140 166" aria-hidden="true" focusable="false"><path d="M40,182 V100 L64,64 L100,44 L136,64 L160,100 V182 Z" fill="none" stroke="#F4EBD6" stroke-width="10" stroke-linejoin="round"/><path d="M78,182 V138 H122 V182 M78,138 L122,182 M122,138 L78,182" fill="none" stroke="#F4EBD6" stroke-width="7"/><path d="M99.67,76.00 A20,20 0 1 0 119.30,101.24 A16,16 0 1 1 99.67,76.00 Z" fill="#F2D06B"/><path d="M34,196 Q100,186 166,196" stroke="#9DB58A" stroke-width="8" fill="none" stroke-linecap="round"/></svg>
+    <span>Digital Farm <em class="and">and</em> Garden</span>
+  </a>
+  <nav class="menu" id="menu" aria-label="Site">
+    <ul class="menu-list" role="list"><li><a href="/games/" aria-current="page"><span class="m-name">Games</span><span class="m-sub">The Card House</span></a></li><li><a href="/firefly-bend/"><span class="m-name">Firefly Bend</span><span class="m-sub">Down the farm road</span></a></li><li><a href="/ironwood/"><span class="m-name">Ironwood Tech</span><span class="m-sub">Learn with AI</span></a></li><li><a href="/now-brewing/"><span class="m-name">Now Brewing</span><span class="m-sub">The studio log</span></a></li></ul>
+    <a class="skipfarm" href="/list/">Skip the farm</a>
+  </nav>
+  <div class="tools js-only">
+    <button class="pill icon" id="sound" type="button" aria-pressed="false" aria-label="Night sounds" title="Night sounds"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path class="w" d="M16 9.5a4 4 0 0 1 0 5M19 7a8 8 0 0 1 0 10" opacity=".35"/></svg></button>
+    <button class="pill icon burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+<div id="stage" class="js-only" style="--poster:url(/assets/world/2395a91452/poster.webp)">
+  <div id="world" aria-label="The farm. Drag to look around, pinch or scroll to zoom, and choose a glowing sign to visit a building."></div>
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+</div>
+<main id="content" class="panel" tabindex="-1" aria-label="Page">
+  <div class="panel-bar js-only"><button class="pill icon collapse" type="button" data-act="collapse" aria-expanded="true" aria-label="Hide page and explore the farm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="scroll">
+    <noscript><img class="nojs-hero" src="/assets/world/2395a91452/preview-1600.webp" width="1600" height="485" alt="A hand-inked night farm in the foothills under a crescent moon and an aurora."></noscript>
+    <article class="page page-bottomless-cup">
+    <figure class="hero"><img src="/assets/world/2395a91452/interiors/cardhouse-720.webp" srcset="/assets/world/2395a91452/interiors/cardhouse-720.webp 720w, /assets/world/2395a91452/interiors/cardhouse-1200.webp 1200w" sizes="(max-width: 760px) 100vw, 480px" width="1200" height="600" alt="" loading="lazy"></figure>
+    <p class="kicker">Games · Coming soon</p>
+    <h1 class="title" tabindex="-1">Bottomless Cup Solitaire</h1>
+    <p class="lede">"Pull up a stool." Classic solitaire at a little diner in Firefly Bend, with big cards you can read and Hank behind the counter.</p>
+    
+      <div class="bc-head"><img class="bc-icon" src="/assets/games/bottomless-cup/icon-128.webp" srcset="/assets/games/bottomless-cup/icon-128.webp 1x, /assets/games/bottomless-cup/icon-256.webp 2x" width="128" height="128" alt="The Bottomless Cup Solitaire app icon: a coffee pot filling a diner mug, with an ace of hearts." decoding="async"><p><span class="tag">Coming soon to the diner</span><br><b class="bc-sub">Large-print cards. No ads.</b></p></div>
+      <div class="shots storeshots carousel" tabindex="0" role="group" aria-label="Store pictures, swipe for more"><figure class="storeshot"><img src="/assets/games/bottomless-cup/01-game-felt-300.webp" srcset="/assets/games/bottomless-cup/01-game-felt-300.webp 300w, /assets/games/bottomless-cup/01-game-felt-600.webp 600w" sizes="(max-width: 760px) 150px, 170px" width="300" height="652" loading="lazy" decoding="async" alt="Store picture: Big cards you can read. Classic solitaire. No ads. A game on green felt at the biggest card size."></figure><figure class="storeshot"><img src="/assets/games/bottomless-cup/02-win-hank-300.webp" srcset="/assets/games/bottomless-cup/02-win-hank-300.webp 300w, /assets/games/bottomless-cup/02-win-hank-600.webp 600w" sizes="(max-width: 760px) 150px, 170px" width="300" height="652" loading="lazy" decoding="async" alt="Store picture: Win a hand, get a story. Hank runs the diner, and he has 42 of them. Hank tells a short story after a win, with Deal again and Another story buttons."></figure><figure class="storeshot"><img src="/assets/games/bottomless-cup/03-how-to-play-300.webp" srcset="/assets/games/bottomless-cup/03-how-to-play-300.webp 300w, /assets/games/bottomless-cup/03-how-to-play-600.webp 600w" sizes="(max-width: 760px) 150px, 170px" width="300" height="652" loading="lazy" decoding="async" alt="Store picture: Rules in plain English. Every rule, explained simply, on the How to play screen."></figure><figure class="storeshot"><img src="/assets/games/bottomless-cup/04-stats-300.webp" srcset="/assets/games/bottomless-cup/04-stats-300.webp 300w, /assets/games/bottomless-cup/04-stats-600.webp 600w" sizes="(max-width: 760px) 150px, 170px" width="300" height="652" loading="lazy" decoding="async" alt="Store picture: Watch your streaks grow. Wins and streaks, kept on your device, on the Stats screen."></figure><figure class="storeshot"><img src="/assets/games/bottomless-cup/05-biggest-four-color-300.webp" srcset="/assets/games/bottomless-cup/05-biggest-four-color-300.webp 300w, /assets/games/bottomless-cup/05-biggest-four-color-600.webp 600w" sizes="(max-width: 760px) 150px, 170px" width="300" height="652" loading="lazy" decoding="async" alt="Store picture: Every suit its own color. Four-color deck, three card sizes."></figure><figure class="storeshot"><img src="/assets/games/bottomless-cup/06-game-wood-four-color-300.webp" srcset="/assets/games/bottomless-cup/06-game-wood-four-color-300.webp 300w, /assets/games/bottomless-cup/06-game-wood-four-color-600.webp 600w" sizes="(max-width: 760px) 150px, 170px" width="300" height="652" loading="lazy" decoding="async" alt="Store picture: Felt or warm wood. A game on the warm wood table."></figure></div>
+      <h2>What's on the table</h2>
+      <ul class="bc-list">
+        <li><b>Big cards you can read.</b> Three card sizes, up to Biggest.</li>
+        <li><b>Win a hand, get a story.</b> Hank runs the diner, and he has 42 stories to tell.</li>
+        <li><b>Rules in plain English.</b> Every rule, explained simply.</li>
+        <li><b>Watch your streaks grow.</b> Wins, streaks and best times, kept on your device.</li>
+        <li><b>Your table, your way.</b> Felt or warm wood, and a four-color deck if you like.</li>
+      </ul>
+      <h2>No ads, no tracking</h2>
+      <p>No ads, no accounts and no tracking. Your games, settings and stats stay on your iPhone or iPad.</p>
+      <p class="say">Being made for iPhone and iPad. Questions? Write to us at <a href="mailto:hello@kdfarmandgarden.com">hello@kdfarmandgarden.com</a>.</p>
+      <p><a href="/games/">Back to all games</a></p>
+  </article>
+    
+    <footer class="site-foot">
+    <nav aria-label="Footer"><a href="/about/">About</a> <a href="/projects/">Projects</a> <a href="/kids/">Kids</a> <a href="/lab/">Lab</a> <a href="/journal/">Journal</a> <a href="/contact/">Contact</a> <a href="/support/">Support</a> <a href="/list/">Skip the farm</a></nav>
+    <p>© 2026 KD Farm and Garden LLC dba Digital Farm and Garden · <a href="/privacy/">Privacy</a></p>
+    <p class="small">No cookies, no trackers, no analytics.</p>
+  </footer>
+  </div>
+</main>
+<button class="pill reopen js-only" type="button" data-act="expand" hidden>Show page</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
