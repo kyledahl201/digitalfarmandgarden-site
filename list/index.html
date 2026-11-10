@@ -25,7 +25,7 @@
 <link rel="icon" href="/assets/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/Fraunces-Bold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/app/main-Kq29tnis.css">
+<link rel="stylesheet" href="/assets/app/main-B1eNwbv2.css">
 
 <!-- Digital Farm and Garden v3 (Engineering). No cookies, no trackers, no third-party requests. Fonts: Fraunces (SIL OFL), self-hosted. Art: Creative. -->
 </head>
@@ -204,6 +204,12 @@
     <p class="lede">One place to see all your AI helpers at once. Each plot is one helper. Green means the work is flowing, and a lantern means it needs you.</p>
     
       <p class="hf-sample"><b>This is a sample.</b> The helpers, the tickets and the days below are made up. Nothing you tap is saved or sent anywhere.</p>
+      <ul class="brew-legend hf-legend" role="list">
+        <li><span class="sw sw-green" aria-hidden="true"></span>Green crops: work is flowing</li>
+        <li><span class="sw sw-yellow" aria-hidden="true"></span>Yellow lantern, farmhand waving: needs you</li>
+        <li><span class="sw sw-red" aria-hidden="true"></span>Red lantern, flagged gate: blocked</li>
+        <li><span class="sw sw-lavender" aria-hidden="true"></span>Lavender soil: resting</li>
+      </ul>
       <div class="hfarm">
         <figure class="brew-art">
           <picture>
@@ -213,16 +219,10 @@
           <figcaption>An illustration with sample states. The version you can tap needs JavaScript.</figcaption>
         </figure>
       </div>
-      <ul class="brew-legend hf-legend" role="list">
-        <li><span class="sw sw-green" aria-hidden="true"></span>Green crops: work is flowing</li>
-        <li><span class="sw sw-yellow" aria-hidden="true"></span>Yellow lantern, farmhand waving: needs you</li>
-        <li><span class="sw sw-red" aria-hidden="true"></span>Red lantern, flagged gate: blocked</li>
-        <li><span class="sw sw-lavender" aria-hidden="true"></span>Lavender soil: resting</li>
-      </ul>
-      <p class="hf-how">Tap a plot to read its ticket. Answer the lantern, open the gate, then press <b>Next morning</b> to see a new sample day.</p>
+      <p class="hf-how">Tap a plot to read its ticket. Answer the lantern, open the gate, then press <b>Next morning</b> to see a new sample day. The red barn is scenery for now. It's where the foreman will plan the day.</p>
 
       <h3>What we're building</h3>
-      <p>More and more small teams run part of their work with AI helpers: one answers questions, one keeps the books tidy, one writes, one checks. Each helper lives in its own window. To know how the day is going, you have to open all of them.</p>
+      <p>More and more small teams run part of their work with AI helpers, often called agents: one answers questions, one keeps the books tidy, one writes, one checks. Each helper lives in its own window. To know how the day is going, you have to open all of them.</p>
       <p>We wanted one place to look. So we're building a single home for all of a team's AI helpers, drawn as a farm, because a farm is something anyone can read from across the yard.</p>
       <h3>How to read the farm</h3>
       <ul class="hf-list">
@@ -233,7 +233,7 @@
         <li><b>Fireflies carry handoffs.</b> When one helper finishes and passes work along, you see it cross the field.</li>
       </ul>
       <h3>The brain behind the fence</h3>
-      <p>Under the picture is the plain part: a list of every job, who has it, and what it's waiting on. A foreman helper plans the day, hands out the work and checks it before it reaches you. The goal is that you only walk out to the field when a lantern is lit.</p>
+      <p>Under the picture is the plain part: a list of every job, who has it, and what it's waiting on. The plan: a foreman helper will plan the day, hand out the work and check it before it reaches you. The goal is that you only walk out to the field when a lantern is lit.</p>
       <h3>Where it stands</h3>
       <p>We're trying an early version on our own studio's work. What you see on this page is a demonstration with made-up data, and it isn't something you can buy or sign up for. We'll write about it in <a href="/now-brewing/">Now Brewing</a> as it grows.</p>
       <p><a href="/lab/">Back to the Lab</a></p>
